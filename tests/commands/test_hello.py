@@ -1,6 +1,3 @@
-"""Tests for our `skele hello` subcommand."""
-
-
 from subprocess import PIPE, Popen as popen
 from unittest import TestCase
 

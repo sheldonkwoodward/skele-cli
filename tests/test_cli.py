@@ -1,10 +1,7 @@
-"""Tests for our main skele CLI module."""
-
-
 from subprocess import PIPE, Popen as popen
 from unittest import TestCase
 
-from skele import __version__ as VERSION
+from skele import __version__ as version
 
 
 class TestHelp(TestCase):
@@ -19,4 +16,4 @@ class TestHelp(TestCase):
 class TestVersion(TestCase):
     def test_returns_version_information(self):
         output = popen(['skele', '--version'], stdout=PIPE).communicate()[0]
-        self.assertEqual(output.strip(), VERSION)
+        self.assertEqual(output.strip(), version)
